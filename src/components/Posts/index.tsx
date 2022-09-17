@@ -25,7 +25,7 @@ export interface IPhotos {
   rover: Rover;
 }
 
-async function getPosts(){
+export async function getStaticProps(){
   const request = await fetch('https://mars-photos.herokuapp.com/api/v1/rovers/Perseverance/photos?sol=557')
   const response = await request.json()
 
@@ -37,8 +37,9 @@ async function getPosts(){
 } 
 
 export default function Post(){
+
  const {data, isError, isLoading} = useQuery('photos', () =>
- getPosts()
+ getStaticProps()
  )
 
  if(isError){
