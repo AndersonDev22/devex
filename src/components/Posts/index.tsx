@@ -36,8 +36,6 @@ async function getPosts(){
   return response.photos as IPhotos[]
 } 
 
-const css = { maxWidth: '100%', height: 'auto' }
-
 export default function Post(){
  const {data, isError, isLoading} = useQuery('photos', () =>
  getPosts()
@@ -61,9 +59,9 @@ export default function Post(){
 
 return (
     <div className="flex bg-white w-full justify-center py-16 px-6">
-      <div className="max-w-[90rem] grid grid-cols-4 gap-4">
+      <div className="max-w-[90rem] grid grid-cols-4 gap-4 md:grid md:grid-cols-3 ">
      {data.map(item => (
-      <>
+      
        <Card
        img_src={item.img_src}
        key={item.id}
@@ -73,7 +71,7 @@ return (
        camera={item.camera} 
        rover={item.rover}      //  img_src={item.img_src}
        />      
-       </>       
+          
        ))}
        </div>
     </div>

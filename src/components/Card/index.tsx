@@ -1,4 +1,7 @@
 import Image from "next/future/image";
+import * as Dialog from '@radix-ui/react-dialog';
+import { ModalImage } from "../Modal/ModalImage";
+import { useState } from "react";
 
 export interface Camera {
   id: number;
@@ -24,8 +27,6 @@ export interface RootObject {
   rover: Rover;
 }
 
-const css = { width: '100%', height: 'auto' }
-
 export function Card({
   id,
   sol,
@@ -35,7 +36,7 @@ export function Card({
   rover,
 }:RootObject){
 
-  return (
+return (
     <div>
      <div className="flex flex-col bg-zinc-100 w-[21rem] 
      border border-solid border-gray-200 rounded-xl items-start 
@@ -68,10 +69,15 @@ export function Card({
         <h1>Landing date: <span className="text-gray-800">{rover.landing_date}</span></h1>
         <h1>Status: <span className="text-gray-800">{rover.status}</span></h1>
       </div>
-    
-      <button className="bg-blue-600 w-full py-3 rounded-xl text-white mt-[18px] text-sm hover:bg-blue-700">
-        View Image
-      </button>
+
+    <Dialog.Root>
+      <Dialog.Trigger asChild>
+        <button className="bg-blue-600 w-full py-3 rounded-xl text-white mt-[18px] text-sm hover:bg-blue-700">
+          View Image
+        </button>      
+      </Dialog.Trigger>
+      <ModalImage />
+    </Dialog.Root>
       </div>
      </div>
 
