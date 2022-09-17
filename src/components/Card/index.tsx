@@ -72,11 +72,19 @@ return (
 
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <button className="bg-blue-600 w-full py-3 rounded-xl text-white mt-[18px] text-sm hover:bg-blue-700">
+        <button 
+        className="bg-blue-600 w-full py-3 rounded-xl text-white mt-[18px] text-sm hover:bg-blue-700"
+        >        
           View Image
         </button>      
       </Dialog.Trigger>
-      <ModalImage />
+      <ModalImage      
+            id={id}
+            img_src={img_src} 
+            sol={sol} 
+            camera={camera} 
+            earth_date={earth_date} 
+            rover={rover}       />
     </Dialog.Root>
       </div>
      </div>
