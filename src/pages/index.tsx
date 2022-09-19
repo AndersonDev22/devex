@@ -1,7 +1,7 @@
 import type { GetStaticProps, NextPage } from 'next'
+import { QueryClient, QueryClientProvider } from 'react-query'
 import { Header } from '../components/Header'
 import { Posts } from '../components/Posts'
-import { QueryClient, QueryClientProvider } from 'react-query'
 import { IPosts } from '../styles/types'
 
 const queryCLiente = new QueryClient()
@@ -27,6 +27,6 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       photos,
     },
-    revalidate: 1 * 24 * 60 * 60,
+    revalidate: 1 * 24 * 60 * 60, // 01 dia - 24 horas
   }
 }

@@ -2,6 +2,8 @@ import * as Dialog from '@radix-ui/react-dialog'
 import Image from 'next/future/image'
 import { IPhotos } from '../../styles/types'
 
+const css = { maxWidth: '100%', height: 'auto' }
+
 export function ModalImage({ id, img_src }: IPhotos) {
   return (
     <Dialog.Portal>
@@ -11,9 +13,13 @@ export function ModalImage({ id, img_src }: IPhotos) {
       />
       <Dialog.Content
         className="
-        flex flex-col justify-start items-center min-w-[56rem] h-[40rem] 
+        flex flex-col justify-start items-center
         rounded-2xl overflow-hidden bg-white fixed top-1/2 left-1/2 
-        -translate-x-1/2 -translate-y-1/2"
+        -translate-x-1/2 -translate-y-1/2
+        sm:min-w-[25rem]
+        1sm:min-w-[40rem]
+        2xl:min-w-[56rem]
+        "
       >
         <Dialog.Title className="text-2xl absolute text-gray-900 mt-5 ">
           Photo Nº: {id}
@@ -28,7 +34,7 @@ export function ModalImage({ id, img_src }: IPhotos) {
           X
         </Dialog.Close>
 
-        <Image src={img_src} alt="" width={900} height={250} />
+        <Image src={img_src} alt="" width={900} height={250} style={css} />
       </Dialog.Content>
     </Dialog.Portal>
   )
