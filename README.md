@@ -1,3 +1,25 @@
+# Desafio - Code Challenge Processo Seletivo Devex Soluções - Estágiario Frontend
+Desafio elaborado para construir uma aplicação que deve renderizar fotos do Mars Rover e informações da camêra e do rover, dando a possibilidade do usuário expandir a imagem, se assim desejar.
+
+## Para esse projeto foram usadas tecnologias como:
+
+- NextJS
+- TypeScript
+- TailwindCSS
+- Radixui
+- React Query
+
+## API:
+
+-API - Seção Mars Rover Photos: https://mars-photos.herokuapp.com/api/v1/rovers/Perseverance/photos?sol=557
+
+![image](https://user-images.githubusercontent.com/82759354/190941836-88fdb1e8-431a-4a8d-bd92-50b18f751c2e.png)
+![image](https://user-images.githubusercontent.com/82759354/190941876-9688654f-cd71-41b1-a59a-aed789103f68.png)
+
+
+Acesse o projeto Clicando aqui: (https://projeto-devex.vercel.app/)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -18,17 +40,3 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
