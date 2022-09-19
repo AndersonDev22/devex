@@ -1,17 +1,14 @@
 import type { GetStaticProps, NextPage } from 'next'
-import { QueryClient, QueryClientProvider } from 'react-query'
 import { Header } from '../components/Header'
 import { Posts } from '../components/Posts'
-import { IPosts } from '../styles/types'
-
-const queryCLiente = new QueryClient()
+import { IPosts } from '../components/Types'
 
 const Home: NextPage = ({ photos }: IPosts) => {
   return (
-    <QueryClientProvider client={queryCLiente}>
+    <>
       <Header />
       <Posts photos={photos} />
-    </QueryClientProvider>
+    </>
   )
 }
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import { IPosts } from '../../styles/types'
 import { Card } from '../Card'
+import { IPosts } from '../Types'
 
 export function Posts({ photos }: IPosts) {
   return (

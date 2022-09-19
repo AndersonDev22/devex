@@ -1,6 +1,6 @@
 import * as Dialog from '@radix-ui/react-dialog'
 import Image from 'next/future/image'
-import { IPhotos } from '../../styles/types'
+import { IPhotos } from '../Types'
 
 const css = { maxWidth: '100%', height: 'auto' }
 

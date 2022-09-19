@@ -1,7 +1,7 @@
 import Image from 'next/future/image'
 import * as Dialog from '@radix-ui/react-dialog'
 import { ModalImage } from '../Modal/ModalImage'
-import { IPhotos } from '../../styles/types'
+import { IPhotos } from '../Types'
 
 export function Card({ id, sol, img_src, earth_date, camera, rover }: IPhotos) {
   return (

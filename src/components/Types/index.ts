@@ -1,11 +1,11 @@
-export interface Camera {
+export interface ICamera {
   id: number
   name: string
   rover_id: number
   full_name: string
 }
 
-export interface Rover {
+export interface IRover {
   id: number
   name: string
   landing_date: string
@@ -16,10 +16,10 @@ export interface Rover {
 export interface IPhotos {
   id: number
   sol: number
-  camera: Camera
+  camera: ICamera
   img_src: string
   earth_date: string
-  rover: Rover
+  rover: IRover
 }
 
 export interface IPosts {
