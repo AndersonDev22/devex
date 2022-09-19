@@ -17,6 +17,12 @@ module.exports = {
         'gray-800': '#515050',
         'zinc-100': '#F4F4F4',
       },
+
+      screens: {
+        sm: '300px',
+        '2xl': '1440px',
+        xl: '1100px',
+      },
     },
   },
   plugins: [],
